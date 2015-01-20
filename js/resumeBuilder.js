@@ -7,14 +7,14 @@ var work = {
 		"titles" : "Consultant",
 		"location" : "Bangkok, Thailand",
 		"dates" : "2013-2015",
-		"description" : "Marketing, business strategy and analytics"
+		"description" : "I work with small businesses and give advice on marketing and business strategy"
 	},
 	{
 		"employer" : "Gotham Direct Inc.",
 		"titles" : "Strategist/Analyst",
 		"location" : "New York, NY, USA",
 		"dates" : "2012-2014",
-		"description" : "Advertising, Analytics, etc"
+		"description" : "Media Strategy and Planning, Advertising, Business Analytics"
 	}
 	]
 };
@@ -26,13 +26,13 @@ var projects = {
 		"title" : "Udacity Project 1: Mockup to Website (HTML & CSS)",
 		"date" : "2015 January",
 		"description" : "The first project was really fun. We learned how to create a website using HTML and CSS from a PDF mockup.",
-		"images" : "http://placekitten.com/g/560/320"
+		"images" : "images/page-mock.png"
 	},
 	{
 		"title" : "Udacity Project 2: Javascript and jQuery",
 		"date" : "2015 January",
-		"description" : "The 2nd project was creating and customizing this website using Javascript and jQuery.",
-		"images" : "https://placekitten.com/g/560/320"
+		"description" : "The 2nd project was creating and customizing this online resume using Javascript and jQuery.",
+		"images" : "images/resume.png"
 	}
 	]
 };
@@ -42,9 +42,9 @@ var projects = {
 var bio = {
 	"pic" : "https://placekitten.com/g/350/320",
 	"name" : "David Tera",
-	"role" : "Front End Web Dev",
-	"welcomeMessage" : "Hi I am David, learning to program.",
-	"skills" : ["marketing", "digital", "development", "majom"],
+	"role" : "Digital Marketing, Business Strategy & Analytics Consultant",
+	"welcomeMessage" : "Currently learning Front-End Web Dev!",
+	"skills" : ["Digital Marketing", "Business Strategy", "Analytics", "Advertising", "MySQL"],
 	"contacts" : 
 	{
 		"mobile": "06202510931",
@@ -89,42 +89,13 @@ var education = {
 
 
 
-
-
-
-
-
-var countries = ["germany", "argentina", "brazil", "netherlands"];
-for (cc in countries) {console.log(countries[cc])};
-
-
-
-//loop if 
-var cameron ={};
-cameron.job = "course dev";
-
-var makeCourse = function () {
-	console.log("Made a course");
-}
-var courses = 0;
-while(cameron.job === "course dev") {
-	makeCourse();
-	courses = courses + 1;
-	if(courses === 10) {
-		cameron.job = "learning specialist";
-	}
-}
-console.log(cameron.job);
-
-
-
 //Header
 
 bio.display = function () {
 
 //Name, Role, Pic, Welcome
-//var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
-//$("#header").append(formattedWelcome);
+var formattedWelcome = HTMLWelcomeMsg.replace("%data%", bio.welcomeMessage);
+$("#header").append(formattedWelcome);
 var formattedPic = HTMLbioPic.replace("%data%", bio.pic);
 $('#header').append(formattedPic);
 var formattedRole = HTMLheaderRole.replace("%data%", bio.role);
@@ -143,7 +114,6 @@ formattedSkill = HTMLskills.replace("%data%", bio.skills[2]);
 $('#skills').append(formattedSkill);
 formattedSkill = HTMLskills.replace("%data%", bio.skills[3]);
 $('#skills').append(formattedSkill);
-
 };
 
 //topContacts
@@ -258,8 +228,6 @@ $('#mapDiv').append(googleMap);
 
 
 //Click Pixel
-
-
 $(document).click(function(loc){
 	var x = loc.pageX;
 	var y = loc.pageY;
@@ -290,7 +258,7 @@ logClicks(x,y);
 
 
 
-//MEnu
+//Menu
 
 (function($) {
 

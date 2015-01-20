@@ -22,8 +22,9 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   <title>Resume</title>
 
   <!-- Load the page styles. -->
-  <link href="css/style.css" rel="stylesheet" type="text/css">
 
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  
   <!--
   jQuery is a common JavaScript library for reading and making changes to the
   Document Object Model (DOM). The DOM is a tree that contains information
@@ -66,7 +67,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
    <li class='last'><a href='#map'><span>Locations</span></a></li>
 </ul>
 </div>
-
+<!-- END OF CSS MENU -->
 
     <!--
     Everything from here to the <script> tag below is the skeleton of your
@@ -77,8 +78,6 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     <div id="header" class="center-content clearfix">
       <ul id="topContacts" class='flex-box'></ul>
     </div>
-
-
     <div style='clear: both;'></div>
     <div id="workExperience" class='gray'>
       <h2>Work Experience</h2>
@@ -98,14 +97,12 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
       </ul>
     </div>
   </div>
-
   <!--
   The next line tells the browser where to download the JavaScript file you'll be
   writing. In resumeBuilder.js, you'll be writing code that builds the resume
   dynamically when this website, index.html, is opened.
   -->
   <script src="js/resumeBuilder.js"></script>
-
 
   <!--
   These scripts are written in JavaScript. You'll be breaking them down as part of
@@ -138,7 +135,7 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
     }
     if(document.getElementsByClassName('work-entry').length === 0) {
       document.getElementById('workExperience').style.display = 'none';
-    }
+
     if(document.getElementsByClassName('project-entry').length === 0) {
       document.getElementById('projects').style.display = 'none';
     }
@@ -154,5 +151,3 @@ need to load. You'll see a lot of <link>s to CSS files for styles and
   </script>
 </body>
 </html>
-
-<a href="#topContacts">Jump</a>
